@@ -18,7 +18,6 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    PasswordManager *passManager;
 
 private slots:
     void digit_pressed();

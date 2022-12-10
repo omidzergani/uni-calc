@@ -9,7 +9,6 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    passManager = new PasswordManager();
 
     // digits
     connect(ui->num0_btn,SIGNAL(clicked()),this,SLOT(digit_pressed()));
@@ -160,12 +159,6 @@ void MainWindow::on_equality_btn_released()
     }
 
     userISTypingSecondNumber = false;
-
-
-    if(ui-> result_label -> text() == "1380") {
-        passManager -> show();
-        this -> close();
-    }
 }
 
 void MainWindow::binary_operation_pressed() {
